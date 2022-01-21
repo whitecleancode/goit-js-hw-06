@@ -1,12 +1,13 @@
 const inputFocus = document.querySelector("#validation-input");
+const six = Number(inputFocus.dataset.length);
 
 const amountOfSymbolsValidation = (event) => {
-  if (event.currentTarget.value.length === 6) {
-    event.currentTarget.classList.add("valid");
-    event.currentTarget.classList.replace("invalid", "valid");
+  if (event.currentTarget.value.length === six) {
+    inputFocus.classList.add("valid");
+    inputFocus.classList.replace("invalid", "valid");
   } else {
-    event.currentTarget.classList.add("invalid");
-    event.currentTarget.classList.replace("valid", "invalid");
+    inputFocus.classList.add("invalid");
+    inputFocus.classList.replace("valid", "invalid");
   }
 };
 
